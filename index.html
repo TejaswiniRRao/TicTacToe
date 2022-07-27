@@ -4,15 +4,18 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="overlays.css">
         <title>TicTacToe Game</title>
     </head>
     <body>
-        <header>
+        <div id="backdrop"></div>
+        <header id="main-header">
             <h1>Play Tic, Tac, Toe</h1>
             <p>Built with HTML, CSS and Javascript</p>
         </header>
         <main>
-            <aside>
+            <aside class="modal">
                 <h2>Choose your name</h2>
                 <form>
                     <div>
@@ -20,8 +23,8 @@
                         <input type="text" name="playername" id="playername">
                     </div>
                     <div>
-                        <button type="button">Cancel</button>
-                        <button type="submit">Confirm</button>
+                        <button type="button" class="btn btn-alt">Cancel</button>
+                        <button type="submit" class="btn">Confirm</button>
                     </div>
                 </form>
             </aside>
@@ -32,7 +35,7 @@
                             <h2>Player 1</h2>
                             <h3>Player Name</h3>
                             <p>X</p>
-                            <button>Edit</button>
+                            <button class="btn btn-alt">Edit</button>
                         </article>
                     </li>
                     <li>
@@ -40,11 +43,11 @@
                             <h2>Player 2</h2>
                             <h3>Player Name</h3>
                             <p>O</p>
-                            <button>Edit</button>
+                            <button class="btn btn-alt">Edit</button>
                         </article>
                     </li>
                 </ol>
-                <button>Start New Game</button>
+                <button class="btn">Start New Game</button>
             </section>
             <section id="active-game">
                 <article>
