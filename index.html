@@ -25,10 +25,11 @@
                 <form>
                     <div class="form-control">
                         <label for="playername">Player Name</label>
-                        <input type="text" name="playername" id="playername">
+                        <input type="text" name="playername" id="playername" required>
                     </div>
+                    <p id="config-errors"></p>
                     <div>
-                        <button type="button" class="btn btn-alt" id="cancel-config-btn">Cancel</button>
+                        <button type="reset" class="btn btn-alt" id="cancel-config-btn">Cancel</button>
                         <button type="submit" class="btn">Confirm</button>
                     </div>
                 </form>
@@ -36,23 +37,23 @@
             <section id="game-configuration">
                 <ol>
                     <li>
-                        <article>
+                        <article id="player-1-data">
                             <h2>Player 1</h2>
                             <h3>Player Name</h3>
                             <p class="player-symbol">X</p>
-                            <button class="btn btn-alt" id="edit-player-1-btn">Edit</button>
+                            <button class="btn btn-alt" id="edit-player-1-btn" data-playerid="1">Edit</button>
                         </article>
                     </li>
                     <li>
-                        <article>
+                        <article id="player-2-data">
                             <h2>Player 2</h2>
                             <h3>Player Name</h3>
                             <p class="player-symbol">O</p>
-                            <button class="btn btn-alt" id="edit-player-2-btn">Edit</button>
+                            <button class="btn btn-alt" id="edit-player-2-btn" data-playerid="2">Edit</button>
                         </article>
                     </li>
                 </ol>
-                <button class="btn">Start New Game</button>
+                <button class="btn" id="start-game-btn">Start New Game</button>
             </section>
             <section id="active-game">
                 <article id="game-over">
@@ -61,17 +62,17 @@
                 </article>
                 <p>It's your turn <span id="active-player-name">Player Name</span>!</p>
                 <ol id="game-board">
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li data-col="1" data-row="1"></li>
+                    <li data-col="2" data-row="1"></li>
+                    <li data-col="3" data-row="1"></li>
 
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li data-col="1" data-row="2"></li>
+                    <li data-col="2" data-row="2"></li>
+                    <li data-col="3" data-row="2"></li>
 
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li data-col="1" data-row="3"></li>
+                    <li data-col="2" data-row="3"></li>
+                    <li data-col="3" data-row="3"></li>
 
                 </ol>
             </section>
